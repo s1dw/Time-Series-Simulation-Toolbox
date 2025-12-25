@@ -44,7 +44,8 @@ plot_results(sim_fixed, data, sim_fixed.simulate(n=1)[0], "Fixed Block")
 
 ### 1. 數據分解 (Kalman Decomposition)
 
-對於多維時間序列觀測向量  
+對於多維時間序列觀測向量
+  
 $$
 \mathbf{y}_t \in \mathbb{R}^d
 $$
