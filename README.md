@@ -1,3 +1,7 @@
+<img src="img/Model Uncertainty Quantification.png" width="800">
+
+---
+
 # Time Series Simulation Toolbox
 
 這是一個基於 Python 的時間序列模擬工具箱，結合了 **卡爾曼濾波 (Kalman Filter)** 的趨勢提取技術與多樣化的 **變點偵測 (Change Point Detection) Bootstrap** 。本工具旨在生成具備歷史統計特性與多維度相關性的合成數據，適用於任一高維度時間序列資料生成。
