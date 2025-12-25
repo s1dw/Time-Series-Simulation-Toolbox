@@ -37,8 +37,8 @@ plot_results(sim_fixed, data, sim_fixed.simulate(n=1)[0], "Fixed Block")
 
 * 檢查模擬殘差的波動率、偏態是否與歷史一致
 
-<img src="img/bspline.png" alt="B-spline basis" width="800">
-
+<img src="img/price.png" width="800">
+<img src="img/volume.png" width="800">
 ---
 ## Block Bootstrap
 
@@ -73,8 +73,7 @@ $$
 
 利用 `ruptures` 套件對標準化殘差矩陣  
 $$
-\tilde{\boldsymbol{\epsilon}}
-= [\tilde{\boldsymbol{\epsilon}}_1, \ldots, \tilde{\boldsymbol{\epsilon}}_T]
+\tilde{\boldsymbol{\epsilon}} = [\tilde{\boldsymbol{\epsilon}}_1, \dots, \tilde{\boldsymbol{\epsilon}}_T]
 $$
 進行變點偵測，將時間軸切分為 $K$ 個統計上相對穩定的區段：
 
