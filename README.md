@@ -193,4 +193,3 @@ $$
 | `window`        | Sliding Window        | 局部波動率變化
 | `bottomup`      | Bottom-up Merge       | 微小變點合併 
 | `fixed`         | Fixed Block Bootstrap | 傳統區塊模擬
-
