@@ -17,7 +17,7 @@ from 模擬 import TimeSeriesSimulator, plot_results
 # 1. 取得數據
 data = yf.download('2330.TW', start='2020-01-01')[['Close', 'Volume']]
 
-# 2. 初始化模擬器 (選擇 PELT 變點偵測方法，搭配 BIC 懲罰項)
+# 2. 初始化模擬器
 sim_fixed = TimeSeriesSimulator(method='fixed', block_size=30)
 
 # 3. 擬合數據並生成模擬路徑
@@ -47,7 +47,7 @@ plot_results(sim_fixed, data, sim_fixed.simulate(n=1)[0], "Fixed Block")
 
 ## Block Bootstrap
 
-### 1. 數據分解 (Kalman Decomposition)
+### 1. 擷取隨機性 (Extracting randomness)
 
 對於多維時間序列觀測向量
 
@@ -75,7 +75,7 @@ $$
 
 ---
 
-### 2. 變點偵測與區段劃分 (Change Point Segmentation)
+### 2. 變點偵測劃分區塊 (Change Point Segmentation)
 
 利用 `ruptures` 套件對標準化殘差矩陣
 
@@ -99,7 +99,7 @@ $$
 
 ---
 
-### 3. 區塊自助法（Block Bootstrap）
+### 3. 區塊拔靴法（Block Bootstrap）
 
 為了保留 **時間相依性（serial dependence）**，本工具在每個區段內採用 **Block Bootstrap** 生成殘差樣本。
 
@@ -133,7 +133,7 @@ $$
 
 ---
 
-### 4. 多變量共變異數重建 (Cross-Sectional Dependence)
+### 4. 合成殘差生成 (Synthetic Residual Generation)
 
 為維持多維特徵（如 Close 與 Volume）之間的相關性，在每個區段 $\mathcal{S}_i$ 中估計共變異數矩陣：
 
@@ -147,10 +147,6 @@ $$
 $$
 \Sigma_i = L_i L_i^\top
 $$
-
----
-
-### 5. 合成殘差生成 (Synthetic Residual Generation)
 
 令標準常態隨機向量：
 
@@ -172,7 +168,7 @@ $$
 
 ---
 
-### 6. 序列還原 (Reconstruction)
+### 6. 重現序列 (Reconstruction)
 
 最後將合成殘差反標準化，並加回卡爾曼趨勢：
 
