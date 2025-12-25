@@ -194,4 +194,3 @@ $$
 | `bottomup`      | Bottom-up Merge       | 微小變點合併 
 | `fixed`         | Fixed Block Bootstrap | 傳統區塊模擬
 
-# Time-Series-Simulation-Toolbox
