@@ -40,12 +40,13 @@ plot_results(sim_fixed, data, sim_fixed.simulate(n=1)[0], "Fixed Block")
 <img src="img/price.png" width="800">
 <img src="img/volume.png" width="800">
 ---
+
 ## Block Bootstrap
 
 ### 1. 數據分解 (Kalman Decomposition)
 
 對於多維時間序列觀測向量
-  
+
 $$
 \mathbf{y}_t \in \mathbb{R}^d
 $$
@@ -72,10 +73,12 @@ $$
 
 ### 2. 變點偵測與區段劃分 (Change Point Segmentation)
 
-利用 `ruptures` 套件對標準化殘差矩陣  
+利用 `ruptures` 套件對標準化殘差矩陣
+
 $$
 \tilde{\boldsymbol{\epsilon}} = [\tilde{\boldsymbol{\epsilon}}_1, \dots, \tilde{\boldsymbol{\epsilon}}_T]
 $$
+
 進行變點偵測，將時間軸切分為 $K$ 個統計上相對穩定的區段：
 
 $$
