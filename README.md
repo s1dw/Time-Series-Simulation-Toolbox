@@ -133,7 +133,7 @@ $$
 
 $$
 \Sigma_i
-= \operatorname{Cov}(\mathcal{S}_i)
+= \text{Cov}(\mathcal{S}_i)
 $$
 
 進行 Cholesky 分解：
