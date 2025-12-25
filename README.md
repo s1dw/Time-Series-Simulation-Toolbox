@@ -171,12 +171,7 @@ $$
 最後將合成殘差反標準化，並加回卡爾曼趨勢：
 
 $$
-\hat{\mathbf{y}}_t
-= \mathbf{T}_t
-+ \left(
-\hat{\boldsymbol{\epsilon}}_t
-\odot \sigma_{\text{original}}
-\right)
+\hat{\mathbf{y}}_t = \mathbf{T}_t + \left( \hat{\boldsymbol{\epsilon}}_t \odot \sigma_{\text{original}} \right)
 $$
 
 得到最終的模擬時間序列：
