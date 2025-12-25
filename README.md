@@ -100,8 +100,7 @@ $$
 對於區段 $\mathcal{S}_i$，將其劃分為長度為 $b$ 的連續區塊：
 
 $$
-\mathcal{B}_{i,j}
-= \{ \tilde{\boldsymbol{\epsilon}}_t \mid t \in [s_j, s_j + b) \}
+\mathcal{B}_{i,j} = \{ \tilde{\boldsymbol{\epsilon}}_t \mid t \in [s_j, s_j + b) \}
 $$
 
 其中 $b$ 可為：
