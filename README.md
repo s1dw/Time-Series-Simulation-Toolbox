@@ -176,12 +176,6 @@ $$
 \hat{\mathbf{y}}_t = \mathbf{T}_t + \left( \hat{\boldsymbol{\epsilon}}_t \odot \sigma_{\text{original}} \right)
 $$
 
-得到最終的模擬時間序列：
-
-$$
-\{ \hat{\mathbf{y}}_t \}_{t=1}^T
-$$
-
 ---
 ## 支援模擬方法 (Supported Methods)
 
